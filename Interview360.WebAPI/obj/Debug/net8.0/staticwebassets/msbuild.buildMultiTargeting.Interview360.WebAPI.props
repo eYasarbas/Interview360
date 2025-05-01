@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Interview360.WebAPI.props" />
+</Project>

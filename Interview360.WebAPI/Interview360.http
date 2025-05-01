@@ -1,0 +1,6 @@
+@Interview360_HostAddress = http://localhost:5208
+
+GET {{Interview360_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,15 @@
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\bin\Debug\net8.0\Interview360.Application.deps.json
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\bin\Debug\net8.0\Interview360.Application.dll
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\bin\Debug\net8.0\Interview360.Application.pdb
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Interview360.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Interview360.Application.AssemblyInfoInputs.cache
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Interview360.Application.AssemblyInfo.cs
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Interview360.Application.csproj.CoreCompileInputs.cache
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Interview360.Application.dll
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\refint\Interview360.Application.dll
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Interview360.Application.pdb
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\ref\Interview360.Application.dll
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\bin\Debug\net8.0\Interview360.Domain.dll
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\bin\Debug\net8.0\Interview360.Domain.pdb
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Interview360.Application.csproj.AssemblyReference.cache
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Application\obj\Debug\net8.0\Intervie.A4CCE831.Up2Date
