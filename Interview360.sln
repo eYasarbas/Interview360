@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview360.Domain", "Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview360.Infrastructure", "Interview360.Infrastructure\Interview360.Infrastructure.csproj", "{EE205C8F-678D-4E03-92FB-89A5A6FEB7A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview360.Persistance", "Interview360.Persistance\Interview360.Persistance.csproj", "{A2DD53C1-CCDE-476C-96EB-D85899F5F1CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview360.Persistence", "Interview360.Persistence\Interview360.Persistence.csproj", "{A2DD53C1-CCDE-476C-96EB-D85899F5F1CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview360.Presentation", "Interview360.Presentation\Interview360.Presentation.csproj", "{44CC46B3-B777-4F87-976C-C6A0B220DD9C}"
 EndProject

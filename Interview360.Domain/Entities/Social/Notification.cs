@@ -14,8 +14,8 @@ namespace Interview360.Domain.AppEntities.Social
         public DateTime CreatedDate { get; set; }
 
         // Navigation properties
-        public ApplicationUser User { get; set; }
-        public Post Post { get; set; }
-        public ApplicationUser RelatedUser { get; set; }
+        public virtual ApplicationUser User { get; set; }
+        public virtual Post Post { get; set; }
+        public virtual ApplicationUser RelatedUser { get; set; }
     }
 } 

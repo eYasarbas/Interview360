@@ -24,8 +24,8 @@ namespace Interview360.Domain.AppEntities.Content
         public int DisplayOrder { get; set; } // Sıralama için
 
         // Navigation properties
-        public Category ParentCategory { get; set; }
-        public ICollection<Category> SubCategories { get; set; }
-        public ICollection<PostCategory> PostCategories { get; set; }
+        public virtual Category ParentCategory { get; set; }
+        public virtual ICollection<Category> SubCategories { get; set; }
+        public virtual ICollection<PostCategory> PostCategories { get; set; }
     }
 } 

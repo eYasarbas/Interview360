@@ -10,7 +10,7 @@ namespace Interview360.Domain.AppEntities.Content
         public Guid CategoryId { get; set; }
 
         // Navigation properties
-        public Post Post { get; set; }
-        public Category Category { get; set; }
+        public virtual Post Post { get; set; }
+        public virtual Category Category { get; set; }
     }
 } 

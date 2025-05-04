@@ -15,3 +15,6 @@ C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Infrastructure\bi
 C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Infrastructure\bin\Debug\net8.0\Interview360.Domain.pdb
 C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Infrastructure\obj\Debug\net8.0\Interview360.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Infrastructure\obj\Debug\net8.0\Intervie.5F0DE55A.Up2Date
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Infrastructure\obj\Debug\net8.0\Interview360.Infrastructure.sourcelink.json
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Infrastructure\bin\Debug\net8.0\Interview360.Persistence.dll
+C:\Users\Enes\Documents\My Web Sites\Interview360\Interview360.Infrastructure\bin\Debug\net8.0\Interview360.Persistence.pdb

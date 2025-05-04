@@ -1,7 +1,8 @@
 using Interview360.Application.Common.Interfaces;
 using Interview360.Domain.Identity;
+using Interview360.Infrastructure.Settings;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -12,14 +13,14 @@ namespace Interview360.Infrastructure.Services;
 public class AuthService : IAuthService
 {
     private readonly UserManager<ApplicationUser> _userManager;
-    private readonly IConfiguration _configuration;
+    private readonly JwtSettings _jwtSettings;
 
     public AuthService(
         UserManager<ApplicationUser> userManager,
-        IConfiguration configuration)
+        IOptions<JwtSettings> jwtSettings)
     {
         _userManager = userManager;
-        _configuration = configuration;
+        _jwtSettings = jwtSettings.Value;
     }
 
     public async Task<(bool isSucceed, string token)> LoginAsync(string email, string password, bool rememberMe)
@@ -57,7 +58,7 @@ public class AuthService : IAuthService
         try
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_configuration["JWT:Secret"]!);
+            var key = Encoding.ASCII.GetBytes(_jwtSettings.Secret);
             
             tokenHandler.ValidateToken(token, new TokenValidationParameters
             {
@@ -98,13 +99,13 @@ public class AuthService : IAuthService
         var roles = await _userManager.GetRolesAsync(user);
         claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]!));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-        var expires = DateTime.Now.AddDays(Convert.ToDouble(_configuration["JWT:ExpireDays"]));
+        var expires = DateTime.Now.AddDays(_jwtSettings.ExpirationInDays);
 
         var token = new JwtSecurityToken(
-            issuer: _configuration["JWT:ValidIssuer"],
-            audience: _configuration["JWT:ValidAudience"],
+            issuer: _jwtSettings.ValidIssuer,
+            audience: _jwtSettings.ValidAudience,
             claims: claims,
             expires: expires,
             signingCredentials: creds

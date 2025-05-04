@@ -13,11 +13,11 @@ namespace Interview360.Domain.Identity
         public DateTime? LastLoginDate { get; set; }
 
         // Navigation properties
-        public ICollection<Post> Posts { get; set; }
-        public ICollection<Comment> Comments { get; set; }
-        public ICollection<Like> Likes { get; set; }
-        public ICollection<Follow> Followers { get; set; }
-        public ICollection<Follow> Following { get; set; }
-        public ICollection<Notification> Notifications { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Like> Likes { get; set; }
+        public virtual ICollection<Follow> Followers { get; set; }
+        public virtual ICollection<Follow> Following { get; set; }
+        public virtual ICollection<Notification> Notifications { get; set; }
     }
 } 

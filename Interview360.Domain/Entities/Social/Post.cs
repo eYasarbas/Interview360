@@ -18,9 +18,9 @@ namespace Interview360.Domain.AppEntities.Social
         public int ShareCount { get; set; }
 
         // Navigation properties
-        public ApplicationUser User { get; set; }
-        public ICollection<Comment> Comments { get; set; }
-        public ICollection<Like> Likes { get; set; }
-        public ICollection<PostCategory> PostCategories { get; set; }
+        public virtual ApplicationUser User { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Like> Likes { get; set; }
+        public virtual ICollection<PostCategory> PostCategories { get; set; }
     }
 } 

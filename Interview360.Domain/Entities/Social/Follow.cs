@@ -10,7 +10,7 @@ namespace Interview360.Domain.AppEntities.Social
         public Guid FollowingId { get; set; }
 
         // Navigation properties
-        public ApplicationUser Follower { get; set; }
-        public ApplicationUser Following { get; set; }
+        public virtual ApplicationUser Follower { get; set; }
+        public virtual ApplicationUser Following { get; set; }
     }
 } 
