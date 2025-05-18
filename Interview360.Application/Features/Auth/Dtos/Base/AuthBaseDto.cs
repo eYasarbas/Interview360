@@ -13,4 +13,4 @@ public abstract record AuthPasswordDto : AuthBaseDto
 public abstract record AuthConfirmPasswordDto : AuthPasswordDto
 {
     public string ConfirmPassword { get; init; } = null!;
-} 
+}

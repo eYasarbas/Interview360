@@ -1,6 +1,5 @@
 using FluentValidation;
 using Interview360.Application.Features.Auth.Commands.Base;
-using Interview360.Application.Features.Auth.Dtos;
 
 namespace Interview360.Application.Features.Auth.Validators.Base;
 
@@ -56,4 +55,4 @@ public abstract class AuthConfirmPasswordValidator<TCommand, TResponse> : AuthPa
             .NotEmpty().WithMessage("Password confirmation is required")
             .Equal(x => x.Password).WithMessage("Passwords do not match");
     }
-} 
+}

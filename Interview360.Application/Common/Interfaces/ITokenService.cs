@@ -9,4 +9,4 @@ public interface ITokenService
     string GetUserIdFromToken(string token);
     Task InvalidateTokenAsync(string userId);
     Task<bool> IsTokenValidAsync(string token);
-} 
+}

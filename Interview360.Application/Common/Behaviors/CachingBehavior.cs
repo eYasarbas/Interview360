@@ -23,17 +23,17 @@ public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
             return await next();
 
         var cacheKey = GetCacheKey(request);
-        
+
         if (_cache.TryGetValue(cacheKey, out TResponse? cachedResponse))
             return cachedResponse!;
 
         var response = await next();
-        
+
         var cacheOptions = new MemoryCacheEntryOptions()
             .SetSlidingExpiration(TimeSpan.FromMinutes(_slidingExpirationMinutes));
-            
+
         _cache.Set(cacheKey, response, cacheOptions);
-        
+
         return response;
     }
 
@@ -47,4 +47,4 @@ public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
     {
         return $"{typeof(TRequest).Name}_{request.GetHashCode()}";
     }
-} 
+}

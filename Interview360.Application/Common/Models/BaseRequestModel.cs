@@ -5,4 +5,4 @@ namespace Interview360.Application.Common.Models;
 
 public abstract record BaseRequestModel<TResponse> : IRequest<IDataResult<TResponse>>
 {
-} 
+}

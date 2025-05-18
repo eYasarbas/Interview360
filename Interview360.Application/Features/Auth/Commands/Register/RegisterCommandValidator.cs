@@ -1,5 +1,4 @@
 using FluentValidation;
-using Interview360.Application.Features.Auth.Commands.Register;
 using Interview360.Application.Features.Auth.Dtos;
 using Interview360.Application.Features.Auth.Validators.Base;
 
@@ -37,4 +36,4 @@ public class RegisterCommandValidator : AuthConfirmPasswordValidator<RegisterCom
             .MaximumLength(500).WithMessage("Bio must not exceed 500 characters")
             .When(x => !string.IsNullOrEmpty(x.Bio));
     }
-} 
+}

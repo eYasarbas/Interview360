@@ -1,9 +1,9 @@
 using Interview360.Application.Common.Interfaces;
 using Interview360.Infrastructure.Settings;
-using Microsoft.Extensions.Options;
-using MimeKit;
 using MailKit.Net.Smtp;
 using MailKit.Security;
+using Microsoft.Extensions.Options;
+using MimeKit;
 
 namespace Interview360.Infrastructure.Services;
 
@@ -44,4 +44,4 @@ public class EmailService : IEmailService
         var body = $"Şifrenizi sıfırlamak için <a href='{resetLink}'>buraya tıklayın</a>.";
         await SendEmailAsync(email, subject, body);
     }
-} 
+}

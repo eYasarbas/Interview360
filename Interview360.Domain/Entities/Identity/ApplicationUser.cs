@@ -1,7 +1,5 @@
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
 using Interview360.Domain.AppEntities.Social;
+using Microsoft.AspNetCore.Identity;
 namespace Interview360.Domain.Identity
 {
     public class ApplicationUser : IdentityUser<Guid>
@@ -20,4 +18,4 @@ namespace Interview360.Domain.Identity
         public virtual ICollection<Follow> Following { get; set; }
         public virtual ICollection<Notification> Notifications { get; set; }
     }
-} 
+}

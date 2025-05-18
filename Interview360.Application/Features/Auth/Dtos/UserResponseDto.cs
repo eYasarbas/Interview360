@@ -13,4 +13,4 @@ public record UserResponseDto : IDto<Guid>
     public int FollowingCount { get; init; }
     public DateTime? LastLoginDate { get; init; }
     public string? Token { get; init; }
-} 
+}

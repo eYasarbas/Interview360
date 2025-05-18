@@ -14,4 +14,4 @@ public class ActiveCategoriesSpecification : ISpecification<Category>
     public int Take => 0;
     public int Skip => 0;
     public bool IsPagingEnabled => false;
-} 
+}

@@ -1,5 +1,4 @@
 using FluentValidation;
-using Interview360.Application.Features.Auth.Commands.ResetPassword;
 using Interview360.Application.Features.Auth.Dtos;
 using Interview360.Application.Features.Auth.Validators.Base;
 
@@ -23,4 +22,4 @@ public class ResetPasswordCommandValidator : AuthConfirmPasswordValidator<ResetP
             .NotEmpty().WithMessage("Password confirmation is required")
             .Equal(x => x.NewPassword).WithMessage("Passwords do not match");
     }
-} 
+}

@@ -31,7 +31,7 @@ public class GetCategoriesQueryHandler : BaseRequestHandler<GetCategoriesQuery, 
 
         var categories = await query.ToListAsync(cancellationToken);
         var mappedCategories = _mapper.Map<IEnumerable<CategoryResponseDto>>(categories);
-        
+
         return new SuccessDataResult<IEnumerable<CategoryResponseDto>>(mappedCategories, "Categories retrieved successfully");
     }
-} 
+}

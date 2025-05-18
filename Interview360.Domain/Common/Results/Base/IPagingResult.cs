@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Interview360.Domain.Common.Results.Base
 {
     public interface IPagingResult<T> : IResult
@@ -13,12 +11,12 @@ namespace Interview360.Domain.Common.Results.Base
         /// Total records, before filtering
         /// </summary>
         int RecordsTotal { get; }
-    
+
         /// <summary>
         /// Total records, after filtering
         /// </summary>
         int RecordsFiltered { get; }
-    
+
         /// <summary>
         /// strongly recommended for security reasons
         /// </summary>

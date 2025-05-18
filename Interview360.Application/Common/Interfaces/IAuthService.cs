@@ -14,4 +14,4 @@ public interface IAuthService
     Task UpdateLastLoginDateAsync(ApplicationUser user);
     Task<(bool isSucceed, string? token)> GeneratePasswordResetTokenAsync(string email);
     Task<(bool isSucceed, string[] errors)> ResetPasswordAsync(string email, string token, string newPassword);
-} 
+}

@@ -11,4 +11,4 @@ public class CategoryRepository : BaseRepository<Category>, ICategoryRepository
     }
 
     // Add category-specific repository methods here if needed
-} 
+}

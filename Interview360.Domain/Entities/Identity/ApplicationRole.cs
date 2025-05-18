@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Identity;
-using System;
 
 namespace Interview360.Domain.Identity
 {
@@ -12,4 +11,4 @@ namespace Interview360.Domain.Identity
         public DateTime? UpdatedDate { get; set; }
         public string? UpdatedBy { get; set; }
     }
-} 
+}

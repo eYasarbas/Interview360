@@ -6,4 +6,4 @@ namespace Interview360.Application.Features.Categories.Queries.GetCategories;
 public record GetCategoriesQuery : BaseRequestModel<IEnumerable<CategoryResponseDto>>
 {
     public bool? IsActive { get; init; }
-} 
+}

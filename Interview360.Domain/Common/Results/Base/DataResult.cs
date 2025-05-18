@@ -1,6 +1,4 @@
-﻿using Interview360.Domain.Common.Results.Base;
-
-namespace Interview360.Domain.Common.Results.Base
+﻿namespace Interview360.Domain.Common.Results.Base
 {
     public class DataResult<T> : Result, IDataResult<T>
     {

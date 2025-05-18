@@ -1,6 +1,8 @@
 using Interview360.Application.Repositories.Category;
+using Interview360.Application.Repositories.Post;
 using Interview360.Persistence.Context;
 using Interview360.Persistence.Repositories;
+using Interview360.Persistence.Repositories.Post;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,7 +19,8 @@ public static class ServiceRegistration
 
         // Repositories
         services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<IPostRepository, PostRepository>();
 
         return services;
     }
-} 
+}

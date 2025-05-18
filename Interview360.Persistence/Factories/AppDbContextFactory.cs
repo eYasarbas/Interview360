@@ -9,7 +9,7 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     public AppDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-        
+
         optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=Interview360Db;User Id=postgres;Password=1q2w3e4r5t;",
             options =>
             {
@@ -21,4 +21,4 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
 
         return new AppDbContext(optionsBuilder.Options);
     }
-} 
+}

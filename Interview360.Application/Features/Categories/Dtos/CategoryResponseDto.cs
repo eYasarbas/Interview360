@@ -9,4 +9,4 @@ public record CategoryResponseDto : IDto<Guid>
     public string? Description { get; init; }
     public bool IsActive { get; init; }
     public DateTime CreateDateTime { get; init; }
-} 
+}

@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-using System.Net;
 using Interview360.Domain.Common.Results.Base;
+using System.Net;
 
 namespace Interview360.Domain.Common.Results.DataResults
 {

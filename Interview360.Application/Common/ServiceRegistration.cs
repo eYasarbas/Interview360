@@ -14,4 +14,4 @@ public static class ServiceRegistration
 
         return services;
     }
-} 
+}

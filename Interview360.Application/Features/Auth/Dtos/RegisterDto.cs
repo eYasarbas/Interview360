@@ -8,4 +8,4 @@ public record RegisterDto
     public string ConfirmPassword { get; init; } = null!;
     public string? ProfileImage { get; init; }
     public string? Bio { get; init; }
-} 
+}

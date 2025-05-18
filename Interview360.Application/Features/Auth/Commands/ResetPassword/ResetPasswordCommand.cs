@@ -12,4 +12,4 @@ public record ResetPasswordCommand : AuthConfirmPasswordCommand<UserResponseDto>
     /// New password
     /// </summary>
     public string NewPassword { get; set; }
-} 
+}

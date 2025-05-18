@@ -22,4 +22,4 @@ public record RegisterCommand : AuthConfirmPasswordCommand<UserResponseDto>
     /// User's bio
     /// </summary>
     public string? Bio { get; set; }
-} 
+}

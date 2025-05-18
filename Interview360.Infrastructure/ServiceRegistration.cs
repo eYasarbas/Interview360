@@ -19,7 +19,7 @@ public static class ServiceRegistration
         services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
 
         // Redis Configuration
-        services.AddSingleton<IConnectionMultiplexer>(sp => 
+        services.AddSingleton<IConnectionMultiplexer>(sp =>
             ConnectionMultiplexer.Connect(configuration.GetConnectionString("Redis")!));
         services.AddScoped<IMemoryCacheService, RedisCacheService>();
 
@@ -35,4 +35,4 @@ public static class ServiceRegistration
 
         return services;
     }
-} 
+}

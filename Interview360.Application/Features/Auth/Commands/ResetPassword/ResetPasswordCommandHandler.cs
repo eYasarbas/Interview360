@@ -36,4 +36,4 @@ public class ResetPasswordCommandHandler : BaseRequestHandler<ResetPasswordComma
         var response = _mapper.Map<UserResponseDto>(user);
         return new SuccessDataResult<UserResponseDto>(response, "Password has been reset successfully");
     }
-} 
+}

@@ -1,6 +1,6 @@
+using Interview360.Domain.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Interview360.Domain.Identity;
 
 namespace Interview360.Persistence.Configurations
 {
@@ -18,4 +18,4 @@ namespace Interview360.Persistence.Configurations
             builder.HasIndex(x => x.IsActive);
         }
     }
-} 
+}

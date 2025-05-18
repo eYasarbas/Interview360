@@ -1,4 +1,3 @@
-using System;
 using Interview360.Domain.Abstraction;
 using Interview360.Domain.Identity;
 
@@ -13,4 +12,4 @@ namespace Interview360.Domain.AppEntities.Social
         public virtual ApplicationUser Follower { get; set; }
         public virtual ApplicationUser Following { get; set; }
     }
-} 
+}

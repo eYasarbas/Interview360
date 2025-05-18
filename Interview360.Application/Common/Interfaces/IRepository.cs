@@ -14,4 +14,4 @@ public interface IRepository<T> where T : Entity<Guid>
     Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
     Task<int> SaveChangesAsync();
     IQueryable<T> Query();
-} 
+}

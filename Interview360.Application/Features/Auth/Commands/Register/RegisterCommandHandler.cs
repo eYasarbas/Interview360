@@ -43,4 +43,4 @@ public class RegisterCommandHandler : BaseRequestHandler<RegisterCommand, UserRe
 
         return new SuccessDataResult<UserResponseDto>(response, "Registration successful");
     }
-} 
+}

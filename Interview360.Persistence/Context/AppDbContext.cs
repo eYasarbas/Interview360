@@ -1,11 +1,10 @@
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Interview360.Domain.AppEntities.Blog;
-using Interview360.Domain.AppEntities;
-using Interview360.Domain.Identity;
-using System.Reflection;
 using Interview360.Domain.AppEntities.Content;
 using Interview360.Domain.AppEntities.Social;
+using Interview360.Domain.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Interview360.Persistence.Context
 {
@@ -32,4 +31,4 @@ namespace Interview360.Persistence.Context
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
-} 
+}

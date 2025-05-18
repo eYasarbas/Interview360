@@ -3,10 +3,10 @@ using Interview360.Domain.Identity;
 using Interview360.Infrastructure.Settings;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Interview360.Infrastructure.Services;
 
@@ -59,7 +59,7 @@ public class AuthService : IAuthService
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_jwtSettings.Secret);
-            
+
             tokenHandler.ValidateToken(token, new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
@@ -142,4 +142,4 @@ public class AuthService : IAuthService
 
         return (true, Array.Empty<string>());
     }
-} 
+}

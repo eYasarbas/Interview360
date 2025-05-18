@@ -1,6 +1,6 @@
-﻿using System.Net;
-using Interview360.Domain.Common.Results.Base;
-    
+﻿using Interview360.Domain.Common.Results.Base;
+using System.Net;
+
 namespace Interview360.Domain.Common.Results.DataResults
 {
     public class UnauthorizedDataResult<T> : DataResult<T>

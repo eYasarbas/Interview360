@@ -1,5 +1,4 @@
 using Interview360.Application.Common.Models;
-using Interview360.Application.Features.Auth.Dtos;
 
 namespace Interview360.Application.Features.Auth.Commands.Base;
 
@@ -40,4 +39,4 @@ public abstract record AuthConfirmPasswordCommand<TResponse> : AuthPasswordComma
     /// Confirmation of user's password
     /// </summary>
     public string ConfirmPassword { get; init; } = null!;
-} 
+}

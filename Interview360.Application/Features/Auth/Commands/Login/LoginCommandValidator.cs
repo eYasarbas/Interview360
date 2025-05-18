@@ -1,5 +1,4 @@
 using FluentValidation;
-using Interview360.Application.Features.Auth.Commands.Login;
 using Interview360.Application.Features.Auth.Dtos;
 using Interview360.Application.Features.Auth.Validators.Base;
 
@@ -15,4 +14,4 @@ public class LoginCommandValidator : AuthPasswordValidator<LoginCommand, UserRes
         RuleFor(x => x.RememberMe)
             .NotNull().WithMessage("Remember me option must be specified");
     }
-} 
+}

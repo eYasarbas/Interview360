@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Interview360.Domain.Abstraction;
 
 namespace Interview360.Domain.AppEntities.Content
@@ -28,4 +26,4 @@ namespace Interview360.Domain.AppEntities.Content
         public virtual ICollection<Category> SubCategories { get; set; }
         public virtual ICollection<PostCategory> PostCategories { get; set; }
     }
-} 
+}

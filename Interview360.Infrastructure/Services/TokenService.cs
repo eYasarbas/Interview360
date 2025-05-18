@@ -6,8 +6,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace Interview360.Infrastructure.Services;
 
@@ -98,8 +96,8 @@ public class TokenService : ITokenService
 
         var userId = GetUserIdFromToken(token);
         var cacheKey = $"invalidated_token_{userId}";
-        
+
         var isInvalidated = await _memoryCacheService.GetAsync<bool>(cacheKey);
         return !isInvalidated;
     }
-} 
+}

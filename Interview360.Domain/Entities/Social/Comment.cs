@@ -1,4 +1,3 @@
-using System;
 using Interview360.Domain.Abstraction;
 using Interview360.Domain.Identity;
 
@@ -17,4 +16,4 @@ namespace Interview360.Domain.AppEntities.Social
         public virtual Post Post { get; set; }
         public virtual Comment ParentComment { get; set; }
     }
-} 
+}

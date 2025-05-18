@@ -12,4 +12,4 @@ public record LoginCommand : AuthPasswordCommand<UserResponseDto>
     /// Whether to remember the user's login
     /// </summary>
     public bool RememberMe { get; init; }
-} 
+}

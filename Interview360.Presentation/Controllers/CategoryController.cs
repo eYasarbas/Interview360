@@ -1,6 +1,4 @@
-using Interview360.Application.Features.Categories.Commands.CreateCategory;
-using Interview360.Application.Features.Categories.Commands.UpdateCategory;
-using Interview360.Application.Features.Categories.Commands.DeleteCategory;
+using Interview360.Application.Features.Categories.Commands.UpsertCategory;
 using Interview360.Application.Features.Categories.Queries.GetCategories;
 using Interview360.Application.Features.Categories.Queries.GetCategoryById;
 using Interview360.Domain.Common.Results.Base;
@@ -33,7 +31,7 @@ public class CategoryController : ControllerBase
     {
         var query = new GetCategoryByIdQuery { Id = id };
         var result = await _mediator.Send(query);
-        
+
         if (result.Status != StatusTypeEnum.Success)
             return NotFound(result);
 
@@ -41,7 +39,7 @@ public class CategoryController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryCommand command)
+    public async Task<IActionResult> UpsertCategory([FromBody] UpsertCategoryCommand command)
     {
         var result = await _mediator.Send(command);
         if (result.Status != StatusTypeEnum.Success)
@@ -49,26 +47,4 @@ public class CategoryController : ControllerBase
 
         return Ok(result);
     }
-
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateCategory(Guid id, [FromBody] UpdateCategoryCommand command)
-    {
-        command = command with { Id = id };
-        var result = await _mediator.Send(command);
-        if (result.Status != StatusTypeEnum.Success)
-            return BadRequest(result);
-
-        return Ok(result);
-    }
-
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteCategory(Guid id)
-    {
-        var command = new DeleteCategoryCommand { Id = id };
-        var result = await _mediator.Send(command);
-        if (result.Status != StatusTypeEnum.Success)
-            return BadRequest(result);
-
-        return Ok(result);
-    }
-} 
+}

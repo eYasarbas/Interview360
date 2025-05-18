@@ -3,7 +3,6 @@ using Interview360.Application.Common.Handlers;
 using Interview360.Application.Common.Interfaces;
 using Interview360.Domain.Common.Results.Base;
 using Interview360.Domain.Common.Results.DataResults;
-using MediatR;
 
 namespace Interview360.Application.Features.Auth.Commands.Logout;
 
@@ -29,4 +28,4 @@ public class LogoutCommandHandler : BaseRequestHandler<LogoutCommand, IResult>
 
         return new SuccessDataResult<IResult>("The logout was successful");
     }
-} 
+}

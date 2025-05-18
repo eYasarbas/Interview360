@@ -3,7 +3,7 @@ using Interview360.Application.Features.Auth.Commands.Login;
 using Interview360.Application.Features.Auth.Commands.Register;
 using Interview360.Application.Features.Auth.Commands.ResetPassword;
 using Interview360.Application.Features.Auth.Dtos;
-using Interview360.Application.Features.Categories.Commands.CreateCategory;
+using Interview360.Application.Features.Categories.Commands.UpsertCategory;
 using Interview360.Application.Features.Categories.Dtos;
 using Interview360.Domain.AppEntities.Content;
 using Interview360.Domain.Identity;
@@ -16,8 +16,8 @@ public class MappingProfile : Profile
     {
         // Category mappings
         CreateMap<Category, CategoryResponseDto>();
-        CreateMap<CreateCategoryCommand, Category>()
-            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()))
+        CreateMap<UpsertCategoryCommand, Category>()
+            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id ?? Guid.NewGuid()))
             .ForMember(dest => dest.CreateDateTime, opt => opt.MapFrom(src => DateTime.UtcNow));
 
         // User mappings
@@ -27,4 +27,4 @@ public class MappingProfile : Profile
         CreateMap<RegisterCommand, RegisterDto>();
         CreateMap<ResetPasswordCommand, ResetPasswordDto>();
     }
-} 
+}
