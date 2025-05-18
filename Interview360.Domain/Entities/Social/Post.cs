@@ -21,6 +21,7 @@ namespace Interview360.Domain.AppEntities.Social
         public Guid? UpdatedBy { get; set; }
         public string? RejectionReason { get; set; }
         public bool IsDeleted { get; set; }
+        public DateTime? InterviewDate { get; set; }  // Interview tarihi
 
         // Media restrictions
         public long? MediaSize { get; set; } // in bytes

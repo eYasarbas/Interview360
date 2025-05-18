@@ -6,12 +6,14 @@ using Interview360.Application.Features.Posts.Queries.GetPost;
 using Interview360.Application.Features.Posts.Queries.GetPosts;
 using Interview360.Domain.Common.Results.Base;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Interview360.Presentation.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class PostController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -22,6 +24,7 @@ public class PostController : ControllerBase
     }
 
     [HttpGet]
+    [AllowAnonymous]
     public async Task<IActionResult> GetPosts([FromQuery] GetPostsQuery query)
     {
         var result = await _mediator.Send(query);
@@ -29,6 +32,7 @@ public class PostController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [AllowAnonymous]
     public async Task<IActionResult> GetPost(Guid id)
     {
         var query = new GetPostQuery { Id = id };
@@ -49,7 +53,6 @@ public class PostController : ControllerBase
 
         return Ok(result);
     }
-
 
     [HttpPost("{id}/like")]
     public async Task<IActionResult> LikePost(Guid id, [FromBody] LikePostCommand command)

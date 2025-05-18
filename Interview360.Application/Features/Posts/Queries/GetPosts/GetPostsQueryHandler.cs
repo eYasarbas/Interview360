@@ -1,5 +1,6 @@
 using AutoMapper;
 using Interview360.Application.Common.Handlers;
+using Interview360.Application.Features.Posts.Queries.GetPost;
 using Interview360.Application.Repositories.Post;
 using Interview360.Domain.Common.Results.Base;
 using Interview360.Domain.Common.Results.DataResults;
@@ -20,7 +21,8 @@ namespace Interview360.Application.Features.Posts.Queries.GetPosts
 
         public override async Task<IDataResult<GetPostsResponse>> Handle(GetPostsQuery request, CancellationToken cancellationToken)
         {
-            var query = _postRepository.Query();
+            var query = _postRepository.Query()
+                .Where(p => !p.IsDeleted && p.Status == PostStatus.Approved);
 
             if (request.UserId.HasValue)
             {
@@ -44,7 +46,7 @@ namespace Interview360.Application.Features.Posts.Queries.GetPosts
 
             var response = new GetPostsResponse
             {
-                Posts = _mapper.Map<List<PostDto>>(posts),
+                Posts = _mapper.Map<List<GetPostResponse>>(posts),
                 TotalCount = totalCount,
                 Page = request.Page,
                 PageSize = request.PageSize,

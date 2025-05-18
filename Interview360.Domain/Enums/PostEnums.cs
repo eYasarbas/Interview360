@@ -2,10 +2,12 @@ namespace Interview360.Domain.Enums
 {
     public enum PostStatus
     {
-        Pending = 0,
-        Active = 1,
-        Rejected = 2,
-        Deleted = 3
+        Draft = 0,    
+        Pending = 1,    
+        Approved = 2,    
+        Rejected = 3,   
+        Archived = 4,  
+        Deleted = 5       
     }
 
     public enum MediaType

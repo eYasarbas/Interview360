@@ -17,6 +17,7 @@ namespace Interview360.Application.Features.Posts.Commands.UpsertPost
         public PostStatus? Status { get; set; }
         public string? ModeratorId { get; set; }
         public bool? IsDeleted { get; set; }
+        public DateTime? InterviewDate { get; set; }
         public List<Guid> CategoryIds { get; set; } = new();
     }
 }
